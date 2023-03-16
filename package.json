@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/cyphersprojekt/Expensas-Express/issues"
   },
-  "homepage": "https://github.com/cyphersprojekt/Expensas-Express#readme"
+  "homepage": "https://github.com/cyphersprojekt/Expensas-Express#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^5.0.0",
+    "mongoose": "^7.0.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  }
 }
