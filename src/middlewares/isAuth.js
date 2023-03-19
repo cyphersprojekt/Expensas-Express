@@ -1,4 +1,4 @@
-function isAuth(req, res, next) {
+export function isAuth(req, res, next) {
     if (req.isAuthenticated()) {
         next()
     }
@@ -6,5 +6,3 @@ function isAuth(req, res, next) {
         res.redirect("/accounts/login")
     }
 }
-
-module.exports = isAuth

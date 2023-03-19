@@ -1,3 +1,3 @@
-module.exports = async (user, done) => {
+export async function serialize(user, done) {
     done(null, user._id)
 }

@@ -1,7 +1,7 @@
-const mongooseHelper = require('../helpers/mongooseHelper')
-const userSchema = require('../db/schemas/userSchema')
+import mongooseHelper from '../helpers/mongooseHelper'
+import userSchema from '../db/schemas/userSchema'
 
-module.exports = class userDAO extends mongooseHelper {
+export class userDAO extends mongooseHelper {
     constructor() {
         super("users", userSchema)
     }

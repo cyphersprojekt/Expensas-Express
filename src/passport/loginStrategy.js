@@ -1,8 +1,8 @@
-const bcryptHelper = require('../helpers/bcrypt-helper')
-const DAOsFactory = require('../helpers/DAOFactory')
-const Users = DAOsFactory.getUserDAO()
-const LocalStrategy = require('passport-local')
-module.exports = new LocalStrategy({username: 'email'},
+import bcryptHelper from '../helpers/bcrypt-helper'
+import DAOsFactory from '../helpers/DAOFactory'
+import Users from DAOsFactory.getUserDAO()
+import LocalStrategy from 'passport-local'
+export const loginStrategy = new LocalStrategy({username: 'email'},
     async (email, password, done) => {
         try {
             let user = await Users.getOne({email: email})
