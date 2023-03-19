@@ -1,4 +1,4 @@
-module.exports = class dbHelperFactory {
+export class dbHelperFactory {
     async getAll(){
         throw Error("Method not implmented")
     }

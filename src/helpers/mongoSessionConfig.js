@@ -1,7 +1,7 @@
-const session = require('express-session')
-const MongoStore = require('connect-mongo')
+import MongoStore from 'connect-mongo'
+import { session } from 'express-session'
 
-let mongoSession = session({
+export const mongoSession = session({
     store: MongoStore.create({
         mongoUrl: process.env.MONGOURL,
         autoRemove: 'native',
@@ -12,9 +12,7 @@ let mongoSession = session({
         }
         
     }),
-    secret: "coderhouse",
+    secret: "SuperSecretSecret",
     resave: true,
     saveUninitialized: false
 })
-
-module.exports =  mongoSession 

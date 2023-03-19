@@ -1,9 +1,9 @@
-const express = require('express')
-const { Server: HttpServer } = require('http')
-const { Server: IOServer } = require('socket.io')
-const cookieParser = require('cookie-parser')
-const bodyParser = require('body-parser')
-const mongoSession = require('./helpers/mongoSessionConfig')
+// const express = require('express')
+import express from 'express'
+import { HttpServer } from 'http'
+import cookieParser from 'cookie-parser'
+import bodyParser from 'bodyParser'
+import mongoSession from './helpers/mongoSessionConfig'
 const app = express()
 
 app.use(mongoSession)

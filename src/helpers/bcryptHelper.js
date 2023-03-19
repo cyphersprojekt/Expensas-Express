@@ -1,6 +1,6 @@
-const bcrypt = require('bcrypt')
+import bcrypt from "bcrypt";
 
-class bcryptHelper{
+export class bcryptHelper{
     checkPassword(hashedPassword, password){
         return bcrypt.compareSync(password, hashedPassword)
     }
@@ -9,5 +9,3 @@ class bcryptHelper{
         return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null)
     }
 }
-
-module.exports = new bcryptHelper()

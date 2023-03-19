@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const dbHelperFactory = require('./dbHelperFactory')
+import mongoose from 'mongoose'
+import dbHelperFactory from './dbHelperFactory'
 
 module.exports = class mongooseHelper extends dbHelperFactory {
     constructor(name, schema) {
