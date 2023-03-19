@@ -1,9 +1,11 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import MongoStore from 'connect-mongo'
-import { session } from 'express-session'
+import session from 'express-session'
 
 export const mongoSession = session({
     store: MongoStore.create({
-        mongoUrl: process.env.MONGOURL,
+        mongoUrl: process.env.MONGO_URL,
         autoRemove: 'native',
         ttl: process.env.SESSION_TTL,
         mongoOptions: {

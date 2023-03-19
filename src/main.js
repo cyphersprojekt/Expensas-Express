@@ -1,9 +1,11 @@
-// const express = require('express')
+import dotenv from 'dotenv'
+dotenv.config()
 import express from 'express'
-import { HttpServer } from 'http'
+import passport from 'passport'
 import cookieParser from 'cookie-parser'
-import bodyParser from 'bodyParser'
-import mongoSession from './helpers/mongoSessionConfig'
+import bodyParser from 'body-parser'
+import { mongoSession } from './helpers/mongoSessionConfig.js'
+
 const app = express()
 
 app.use(mongoSession)
@@ -16,9 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser())
 
 
-const httpServer = new HttpServer(app)
-const io = new IOServer(httpServer)
 const PORT = process.env.PORT || 8000
-httpServer.listen(PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log(`App started and listening on port ${PORT} :) - Current PID is ${process.pid}`)
 })
