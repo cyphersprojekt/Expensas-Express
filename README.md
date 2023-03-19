@@ -5,8 +5,8 @@ Sistema de gestión de expensas de edificios y barrios privados en Express
 ## TODO:
 - [x] Generar estructura de carpetas y main.js  
 - [x] Definir modelos iniciales: Usuarios (clientes y administradores, quizÁS encargados), unidades, liquidaciones, sub-liquidaciones, pagos  
-- [ ] Crear una DB en Mongo Atlas accesible para todos y documentar aca sus credenciales
-- [ ] Bocetos de las vistas y RBA  
+- [x] Crear una DB en Mongo Atlas accesible para todos
+- [ ] Bocetos de las vistas y RBA  // in-progress: https://miro.com/app/board/uXjVMbktFp0=/#tpicker-content
 - [ ] Decidir en un standard de logueo de errores y de respuestas de funciones
 - [X] Diseñar la persistencia de información con DAOs, una factory y un helper (falta testear)
 - [ ] Decidir si necesitamos real time rendering y como conseguirlo, sea con web sockets o js
