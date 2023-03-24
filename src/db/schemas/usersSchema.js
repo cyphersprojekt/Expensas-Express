@@ -8,5 +8,6 @@ export const usersSchema = new Schema({
     phone_number: {type: String, required: true},
     emergency_number: {type: String, required: false},
     user_type: {type: String, required: true},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
+    enabled: {type: Boolean, required: true, default: true}
 })

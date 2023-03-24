@@ -3,13 +3,14 @@
 ## Usuarios:
 | **field**        | **type**     | **description**                                    |
 |------------------|--------------|----------------------------------------------------|
-| full_name         | string       | Self-descriptive                                   |
+| full_name        | string       | Self-descriptive                                   |
 | unit             | string       | apt unit. i.e 1-A, 2-B, 3-C etc                    |
 | email            | string/email | name@provider.com                                  |
-| phone_number      | string       | +54 11 123456789                                   |
+| phone_number     | string       | +54 11 123456789                                   |
 | emergency_number | string       | ^=, used if you die and someone needs to be called |
 | type             | string       | admin/clerk/tenant                                 |
 | password         | string       | bcrypt generated string                            |
+| enabled          | bool         |i moved out so i can't login                        |
 
 
 
