@@ -1,6 +1,6 @@
-import bcryptHelper from '../helpers/bcrypt-helper'
+import bcryptHelper from '../helpers/bcryptHelper.js'
 import LocalStrategy from 'passport-local'
-import DAOsFactory from '../helpers/DAOFactory'
+import DAOsFactory from '../helpers/DAOFactory.js'
 const Users = DAOsFactory.getUserDAO()
 export const registerStrategy = new LocalStrategy({usernameField: 'email', passwordField: 'password', passReqToCallback: true},
     async (req, email, password, done) => {

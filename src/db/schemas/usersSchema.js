@@ -1,7 +1,8 @@
-import mongoose from 'mongoose';
-const { Schema } = mongoose;
+import {Schema} from 'mongoose'
+// import mongoose from 'mongoose';
+// const { Schema } = mongoose;
 
-export const usersSchema = new Schema({
+const usersSchema = new Schema({
     full_name: {type: String, required: true},
     unit: {type: String, required: true},
     email: {type: String, required: true},
@@ -11,3 +12,5 @@ export const usersSchema = new Schema({
     password: {type: String, required: true},
     enabled: {type: Boolean, required: true, default: true}
 })
+
+export default usersSchema

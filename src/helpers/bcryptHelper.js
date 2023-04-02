@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 
-export class bcryptHelper{
+export default class bcryptHelper{
     checkPassword(hashedPassword, password){
         return bcrypt.compareSync(password, hashedPassword)
     }

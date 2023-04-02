@@ -3,7 +3,7 @@ import session from 'express-session'
 
 export const mongoSession = session({
     store: MongoStore.create({
-        mongoUrl: process.env.MONGO_URL,
+        mongoUrl: process.env.MONGOURL,
         autoRemove: 'native',
         ttl: process.env.SESSION_TTL,
         mongoOptions: {

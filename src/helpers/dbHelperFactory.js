@@ -1,4 +1,4 @@
-export class dbHelperFactory {
+export default class dbHelperFactory {
     async getAll(){
         throw Error("Method not implmented")
     }

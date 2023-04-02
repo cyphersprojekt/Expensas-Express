@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
-import dbHelperFactory from './dbHelperFactory'
+import dbHelperFactory from './dbHelperFactory.js'
 
-module.exports = class mongooseHelper extends dbHelperFactory {
+export default class mongooseHelper extends dbHelperFactory {
     constructor(name, schema) {
         super()
         mongoose.connect(process.env.MONGOURL) 

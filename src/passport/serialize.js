@@ -1,3 +1,3 @@
-export async function serialize(user, done) {
+export default async function serialize(user, done) {
     done(null, user._id)
 }

@@ -1,7 +1,7 @@
-import mongooseHelper from '../helpers/mongooseHelper'
-import userSchema from '../db/schemas/userSchema'
+import mongooseHelper from '../helpers/mongooseHelper.js'
+import userSchema from '../db/schemas/usersSchema.js'
 
-export class userDAO extends mongooseHelper {
+export default class userDAO extends mongooseHelper {
     constructor() {
         super("users", userSchema)
     }
