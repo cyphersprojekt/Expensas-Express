@@ -9,14 +9,14 @@ import isAuth from '../middlewares/isAuth.js'
 import DAOsFactory from '../helpers/DAOFactory.js'
 const Users = DAOsFactory.getUserDAO()
 import { renderLoginPage } from '../controllers/generic/authControl.js'
+import { postLogin } from '../controllers/generic/authControl.js'
 passport.use('login', loginStrategy)
 passport.use('register', registerStrategy)
 passport.serializeUser(serialize)
 passport.deserializeUser(deserialize)
 
 accountsRouter.get('/login', renderLoginPage)
-
-
+accountsRouter.post('/login', passport.authenticate('login', {failureRedirect: 'https://www.google.com'}), postLogin)
 
 
 export default accountsRouter 

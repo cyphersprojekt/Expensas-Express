@@ -6,6 +6,7 @@ import handlebars from 'express-handlebars'
 import { mongoSession } from './helpers/mongoSessionConfig.js'
 
 import accountsRouter from './routes/accounts.js'
+import mainRouter from './routes/main.js'
 
 const app = express()
 
@@ -28,6 +29,7 @@ app.engine('hbs', handlebars.engine({
 }))
 
 app.use('/accounts', accountsRouter)
+app.use('/', mainRouter)
 
 const PORT = process.env.PORT || 8000
 app.listen(PORT, ()=>{

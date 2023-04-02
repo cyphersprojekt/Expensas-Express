@@ -1,9 +1,13 @@
 import mongooseHelper from '../helpers/mongooseHelper.js'
-import userSchema from '../db/schemas/usersSchema.js'
+import usersSchema from '../db/schemas/usersSchema.js'
 
 export default class userDAO extends mongooseHelper {
     constructor() {
-        super("users", userSchema)
+        super("users", usersSchema)
+    }
+
+    async findUserByEmail(email) {
+        return await this.model.find({email: email}).lean()
     }
 
     // funciones propias de este dao
