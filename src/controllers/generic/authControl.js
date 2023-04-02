@@ -4,6 +4,6 @@ import { logger } from "../../utils/logger.js";
 const userDAO = DAOFactory.getUserDAO();
 
 export async function renderLoginPage(req, res) {
-        res.render('login', {layout: false})
+        res.render('login')
     }
 

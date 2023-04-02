@@ -22,7 +22,9 @@ app.set('view engine', 'hbs')
 app.set('views', './src/views')
 app.engine('hbs', handlebars.engine({
     extname: '.hbs',
-    layoutsDir: './src/views/layouts'
+    layoutsDir: './src/views/layouts',
+    partialsDir: './src/views/partials'
+    
 }))
 
 app.use('/accounts', accountsRouter)
