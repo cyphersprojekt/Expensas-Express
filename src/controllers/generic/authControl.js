@@ -8,8 +8,6 @@ export async function renderLoginPage(req, res) {
     }
 
 export async function postLogin(req, res) {
-        console.log('entro a postLogin')
-        console.log(req)
-        // req.session.save()
+        req.session.save()
         res.redirect("/") 
     }

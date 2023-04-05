@@ -10,13 +10,14 @@ import mainRouter from './routes/main.js'
 
 const app = express()
 
-app.use(mongoSession)
-app.use(passport.initialize())
-app.use(passport.session())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }))
+app.use(mongoSession)
+app.use(passport.initialize())
+app.use(passport.session())
+
 app.use(cookieParser())
 app.use(express.static("./src/public"))
 

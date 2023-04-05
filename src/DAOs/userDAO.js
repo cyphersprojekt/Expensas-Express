@@ -7,7 +7,7 @@ export default class userDAO extends mongooseHelper {
     }
 
     async findUserByEmail(email) {
-        return await this.model.find({email: email}).lean()
+        return await this.model.findOne({email: email}).lean()
     }
 
     // funciones propias de este dao
